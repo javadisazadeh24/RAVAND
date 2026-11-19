@@ -7,3 +7,7 @@ backups/*.sql
 storage
 next-env.d.ts
 *.tsbuildinfo
+install.log
+start-ravand.vbs
+stop-ravand.ps1
+stop-ravand.cmd

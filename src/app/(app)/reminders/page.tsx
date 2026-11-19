@@ -2,7 +2,7 @@ import { prisma } from '@/lib/db';
 import { requireUser } from '@/lib/auth';
 import { faNum, formatJalali, formatTime } from '@/lib/jalali';
 import JalaliDateInput from '@/components/JalaliDateInput';
-import { createReminder, deleteReminder, doneReminder } from '../actions';
+import { createReminder, deleteReminder, doneReminder } from '@/app/actions';
 
 export default async function Reminders() {
   const u = await requireUser();

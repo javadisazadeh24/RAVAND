@@ -1,9 +1,0 @@
-node_modules
-.next
-.env
-.env.*
-!.env.example
-backups/*.sql
-storage
-next-env.d.ts
-*.tsbuildinfo

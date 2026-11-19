@@ -5,7 +5,7 @@ import { isManager, isOwner } from '@/lib/perm';
 import { OPEN } from '@/lib/data';
 import { EMPLOYMENT, ROLE } from '@/lib/labels';
 import { faNum, startOfTehranDay } from '@/lib/jalali';
-import { createUser, resetPassword, toggleUserActive } from '../actions';
+import { createUser, resetPassword, toggleUserActive } from '@/app/actions';
 
 export default async function Team() {
   const u = await requireUser();

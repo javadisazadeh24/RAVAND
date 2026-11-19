@@ -15,7 +15,7 @@ export default function ReminderPoller() {
         const { items } = (await r.json()) as { items: Item[] };
         if (stop || !items.length) return;
         setToasts((t) => [...t, ...items]);
-        if (typeof Notification !== 'undefined' && Notification.permission === 'granted') items.forEach((i) => new Notification('یادآور راوند', { body: i.title }));
+        if (typeof Notification !== 'undefined' && Notification.permission === 'granted') items.forEach((i) => new Notification('یادآور روند', { body: i.title }));
       } catch { /* offline: try again next tick */ }
     };
     tick();

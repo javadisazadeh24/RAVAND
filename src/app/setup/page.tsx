@@ -1,13 +1,13 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
-import { setupOwner } from '../actions';
+import { setupOwner } from '@/app/actions';
 export const dynamic = 'force-dynamic';
 
 export default async function Setup({ searchParams }: { searchParams: { e?: string } }) {
   if ((await prisma.user.count()) > 0) redirect('/login');
   return (
     <div className="auth"><form className="panel form" action={setupOwner}>
-      <img src="/logo.png" alt="راوند" />
+      <img src="/logo.png" alt="روند" />
       <h2 style={{ textAlign: 'center' }}>راه‌اندازی اولیه</h2>
       <p className="muted sm">حساب مدیرعامل را بسازید. این صفحه فقط یک بار، وقتی هنوز کاربری وجود ندارد، فعال است.</p>
       <label>نام<input name="name" required /></label>

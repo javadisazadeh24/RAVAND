@@ -1,13 +1,13 @@
 import { redirect } from 'next/navigation';
 import { prisma } from '@/lib/db';
-import { login } from '../actions';
+import { login } from '@/app/actions';
 export const dynamic = 'force-dynamic';
 
 export default async function Login({ searchParams }: { searchParams: { e?: string } }) {
   if ((await prisma.user.count()) === 0) redirect('/setup');
   return (
     <div className="auth"><form className="panel form" action={login}>
-      <img src="/logo.png" alt="راوند" />
+      <img src="/logo.png" alt="روند" />
       <h2 style={{ textAlign: 'center' }}>ورود به سیستم مدیریت</h2>
       <label>ایمیل<input name="email" type="email" required autoComplete="username" dir="ltr" /></label>
       <label>رمز عبور<input name="password" type="password" required autoComplete="current-password" dir="ltr" /></label>

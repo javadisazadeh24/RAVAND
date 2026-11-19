@@ -6,7 +6,7 @@ import { computeHealth, projectProgress } from '@/lib/health';
 import { HEALTH, PRIORITY, PROJECT_STATUS } from '@/lib/labels';
 import { faNum, formatJalaliShort } from '@/lib/jalali';
 import JalaliDateInput from '@/components/JalaliDateInput';
-import { createProject } from '../actions';
+import { createProject } from '@/app/actions';
 
 export default async function Projects({ searchParams }: { searchParams: { s?: string } }) {
   const u = await requireUser();

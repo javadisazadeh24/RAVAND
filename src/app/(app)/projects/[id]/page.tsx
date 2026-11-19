@@ -8,7 +8,7 @@ import { faNum, formatJalali, formatJalaliShort, startOfTehranDay } from '@/lib/
 import TaskRow, { taskInclude } from '@/components/TaskRow';
 import AutoSelect from '@/components/AutoSelect';
 import JalaliDateInput from '@/components/JalaliDateInput';
-import { archiveProject, createTask, setProjectHealth, setProjectStatus } from '../../actions';
+import { archiveProject, createTask, setProjectHealth, setProjectStatus } from '@/app/actions';
 
 export default async function ProjectPage({ params }: { params: { id: string } }) {
   const u = await requireUser();

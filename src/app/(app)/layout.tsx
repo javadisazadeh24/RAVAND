@@ -2,7 +2,7 @@ import { requireUser } from '@/lib/auth';
 import { isManager } from '@/lib/perm';
 import { prisma } from '@/lib/db';
 import { ROLE } from '@/lib/labels';
-import { logout, createTask } from '../actions';
+import { logout, createTask } from '@/app/actions';
 import NavLink from '@/components/NavLink';
 import Clock from '@/components/Clock';
 import ReminderPoller from '@/components/ReminderPoller';
@@ -16,7 +16,7 @@ export default async function AppLayout({ children }: { children: React.ReactNod
   return (
     <div className="shell">
       <aside className="side">
-        <div className="brand"><img src="/logo.png" alt="" /><div><b>راوند</b><span>سیستم مدیریت</span></div></div>
+        <div className="brand"><img src="/logo.png" alt="" /><div><b>روند</b><span>سیستم مدیریت</span></div></div>
         <NavLink href="/">{mgr ? 'کنترل مدیریت' : 'روز من'}{unread > 0 && <span className="badge b-HIGH">{unread}</span>}</NavLink>
         <NavLink href="/tasks">وظایف</NavLink>
         <NavLink href="/projects">پروژه‌ها</NavLink>

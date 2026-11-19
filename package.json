@@ -1,15 +1,15 @@
 {
   "name": "ravand-os",
-  "version": "0.1.0",
+  "version": "1.0.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
     "build": "prisma generate && next build",
     "start": "next start",
     "typecheck": "tsc --noEmit",
+    "setup:env": "node scripts/init-env.mjs",
     "db:migrate": "prisma migrate dev",
     "db:deploy": "prisma migrate deploy",
-    "db:up": "docker compose up -d db",
     "backup": "node scripts/backup.mjs",
     "restore": "node scripts/restore.mjs",
     "postinstall": "prisma generate"

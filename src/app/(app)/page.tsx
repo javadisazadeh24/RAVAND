@@ -8,7 +8,7 @@ import { HEALTH, PROJECT_STATUS, REPORT_TYPE } from '@/lib/labels';
 import { faNum, formatJalali, formatJalaliShort, jalaliOf, startOfTehranDay, dateToIso, isoToDate } from '@/lib/jalali';
 import MiniCalendar from '@/components/MiniCalendar';
 import TaskRow, { taskInclude } from '@/components/TaskRow';
-import { markNotificationsRead } from '../actions';
+import { markNotificationsRead } from '@/app/actions';
 
 const stat = (n: number, label: string, tone = '') => <div className={`stat ${tone}`}><b className="num">{faNum(n)}</b><span>{label}</span></div>;
 

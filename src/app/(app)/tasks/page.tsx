@@ -8,7 +8,7 @@ import { PRIORITY, TASK_TYPE } from '@/lib/labels';
 import { faNum, startOfTehranDay } from '@/lib/jalali';
 import TaskRow, { taskInclude } from '@/components/TaskRow';
 import JalaliDateInput from '@/components/JalaliDateInput';
-import { createTask } from '../actions';
+import { createTask } from '@/app/actions';
 
 const VIEWS: [string, string][] = [['open', 'باز'], ['overdue', 'دیرکرد'], ['blocked', 'مسدود'], ['done', 'انجام‌شده'], ['all', 'همه']];
 

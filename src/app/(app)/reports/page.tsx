@@ -4,7 +4,7 @@ import { requireUser } from '@/lib/auth';
 import { isManager, projectScope } from '@/lib/perm';
 import { DAILY_FIELDS, REPORT_STATE, REPORT_TYPE, WEEKLY_FIELDS, type Field } from '@/lib/labels';
 import { formatJalali, formatJalaliShort, faNum } from '@/lib/jalali';
-import { reviewReport, submitReport } from '../actions';
+import { reviewReport, submitReport } from '@/app/actions';
 
 function ReportForm({ type, fields, projects }: { type: 'DAILY' | 'WEEKLY'; fields: Field[]; projects: { id: string; title: string }[] }) {
   return (
